@@ -5,7 +5,6 @@
 
 ## 📋 Table of Contents  
 - [Features](#-key-features)  
-- [Quick Start](#-quick-start)  
 - [Installation](#-installation-guide)  
 - [Usage](#-usage-patterns) 
 
@@ -26,22 +25,12 @@
 # Verify PowerShell 7.4+
 $PSVersionTable.PSVersion
 ```
+## 🛠️ Installation Guide  
 
-
-### Basic Setup  
-1. Clone repo:  
+### Clone this repo to get supporting files
    ```bash
    git clone https://github.com/jon-raven-auto/vscode-rewst-CICD.git
    ```  
-2. Install [Trigger Task on Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave)  
-3. Import `[RAVEN] Template CI-CD.json` workflow to Rewst  
-
----
-
-## 🛠️ Installation Guide  
-
-### Clone this repo to get supporting files. Then follow through steps below.
-
 ### Setup Trigger Task on Save
 Install VSCode extension [Gruntfuggly.triggertaskonsave](https://github.com/Gruntfuggly/triggertaskonsave)
 
