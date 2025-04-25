@@ -21,10 +21,15 @@
 ## 🚀 Quick Start  
 
 ### Requirements  
+- Powershell 7 latest
 ```powershell
 # Verify PowerShell 7.4+
 $PSVersionTable.PSVersion
 ```
+- Rewst Powershell Beta Interpreter
+- VSCode with Extensions
+
+
 ## 🛠️ Installation Guide  
 
 ### Clone this repo to get supporting files
