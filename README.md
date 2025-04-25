@@ -63,13 +63,13 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
 - Ensure Webhook Trigger is
     - Enabled
     - POST method is allowed
-    - YOUR OWN "Secret Key" is seleted (will be used later)
+    - YOUR OWN "Secret Key" is selected (will be used later)
 
 - Take note of webhook URL
 
 ### Configure ENV
 ***!CAUTION***
-Please add .ENV to your .gitignore if using git before proceeding 
+Please add .ENV to your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
 
 - Navigate to ```.vscode/.ENV```
 
@@ -92,16 +92,6 @@ yourcompany_ps=true
 
 This setup will only target files nested under `/templates/yourcompany`. Any other files will not trigger the script on save. You can have layers of folders under this.
 
-After setup everything revolves around keywords in the first line of the file:
-
-`create template` or `export`
-
-It does not matter if these are commented out, the script will still process then. If both are present then preference is given to `export`.
-
-To create a new template simply put the `create template` keyword in the first line of the file and save. You should see the script running at the bottom of your VSCode. On completion `create template` will be replaced with `export 00000000-0000-0000-0000-000000000000`. Any further changes will then be exported to the proper template.
-
-The template name will be updated in Rewst to the default of `project_folder/file.html`.
-
 ### Folder Structure  
 ```  
 📁 .vscode/
@@ -116,6 +106,18 @@ The template name will be updated in Rewst to the default of `project_folder/fil
         └── 📁 shared/  
             └── 📄 base_layout.html → Rewst: "shared/base_layout.html"  
 ```
+
+After setup everything revolves around keywords in the first line of the file:
+
+`create template` or `export`
+
+It does not matter if these are commented out, the script will still process them. If both are present then preference is given to `export`.
+
+To create a new template simply put the `create template` keyword in the first line of the file and save. You should see the script running at the bottom of your VSCode. On completion `create template` will be replaced with `export 00000000-0000-0000-0000-000000000000`. Any further changes will then be exported to the proper template.
+
+The template name will be updated in Rewst to the default of `project_folder/file.html`.
+
+
 
 ### Template Lifecycle  
 1. **Creation**:  
