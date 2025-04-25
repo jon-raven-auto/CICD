@@ -1,0 +1,24 @@
+{
+	// See https://code.visualstudio.com/docs/editor/tasks for more information
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "manage_template",
+			"type": "shell",
+			"command": "pwsh",
+			"args": [
+				"-executionpolicy",
+				"bypass",
+				"-File",
+				"${workspaceFolder}/.vscode/manage_template.ps1",
+				"-TargetFile",
+				"${file}"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
