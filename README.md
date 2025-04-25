@@ -21,13 +21,13 @@
 ## 🚀 Quick Start  
 
 ### Requirements  
-- Powershell 7 latest
+- [Powershell 7 latest](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
 ```powershell
 # Verify PowerShell 7.4+
 $PSVersionTable.PSVersion
 ```
 - Rewst Powershell Beta Interpreter
-- VSCode with Extensions
+- [VSCode](https://code.visualstudio.com/) with Extensions
 
 
 ## 🛠️ Installation Guide  
