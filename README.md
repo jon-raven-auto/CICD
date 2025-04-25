@@ -31,7 +31,7 @@ $PSVersionTable.PSVersion
 ### Basic Setup  
 1. Clone repo:  
    ```bash
-   git clone https://github.com/yourorg/rewst-template-cicd.git
+   git clone https://github.com/jon-raven-auto/vscode-rewst-CICD.git
    ```  
 2. Install [Trigger Task on Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave)  
 3. Import `[RAVEN] Template CI-CD.json` workflow to Rewst  
