@@ -24,8 +24,6 @@ $PSVersionTable.PSVersion
 
 ```
 
-- Rewst Powershell Beta Interpreter
-
 - [VSCode](https://code.visualstudio.com/) with Extensions
 
   
