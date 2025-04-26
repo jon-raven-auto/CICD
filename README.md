@@ -7,29 +7,13 @@
 
 -  **ID Auto-Update**: `create template` → `export [UUID]` conversion for seemless creation
 
--  **Multi-Org Support**: Manage multiple Rewst organizations via `.ENV` sections
+-  **Multi-Org Support**: Manage multiple Rewst instances
 
 -  **Filetype Agnostic**: Works with `<!-- -->`, `{# #}`, or `/* */` syntax
   
-
-## Requirements
-
-- [Powershell 7 latest](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
-
-```powershell
-
-# Verify PowerShell 7.4+
-
-$PSVersionTable.PSVersion
-
-```
-
-- [VSCode](https://code.visualstudio.com/) with Extensions
-
   
 ## 🧩 Usage Patterns
 
-  
 
 ### Folder Structure
 
@@ -117,7 +101,20 @@ The template name will be updated in Rewst to the default of the realtive path t
 
 ## 🛠️ Installation Guide
 
-  
+### Requirements
+
+- [Powershell 7 latest](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
+
+    ```powershell
+
+    # Verify PowerShell 7.4+
+
+    $PSVersionTable.PSVersion
+
+    ```
+
+- [VSCode](https://code.visualstudio.com/) with Extensions
+
 
 ### Clone this repo to get supporting files
 
