@@ -67,7 +67,7 @@ git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
 
 ### Rewst Import Workflow
 
-- Import "\[RAVEN] Template CICD*.json" workflow into Rewst
+- Import workflow from json file `.vscode\vscode-rewst-CICD\[RAVEN] Template CICD*.json` workflow into Rewst
 
 - Ensure Webhook Trigger is
     - Enabled
