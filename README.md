@@ -27,94 +27,6 @@ $PSVersionTable.PSVersion
 - [VSCode](https://code.visualstudio.com/) with Extensions
 
   
-  
-
-## 🛠️ Installation Guide
-
-  
-
-### Clone this repo to get supporting files
-
-```bash
-
-git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
-
-```
-
-### Setup Trigger Task on Save
-
-- Install VSCode extension [Gruntfuggly.triggertaskonsave](https://github.com/Gruntfuggly/triggertaskonsave) 
-
-- Go to the extension's settings
-
-(VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json")
-
-- Copy in this configuration
-
-```json
-{
-    "git.autofetch": true,
-    "editor.formatOnSave": true,
-    "triggerTaskOnSave.tasks": {
-        "manage_template": [
-            "**"
-        ]
-    }
-}
-```
-
-  
-
-### Rewst Import Workflow
-
-- Import workflow from json file `.vscode/vscode-rewst-CICD/[RAVEN] Template CICD*.json` workflow into Rewst
-
-- Ensure Webhook Trigger is
-    - Enabled
-    - POST method is allowed
-    - YOUR OWN "Secret Key" is selected (will be used later)
-
-- Take note of webhook URL
-
-  
-
-### Config
-
-***!CAUTION***
-
-Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
-
-  
-
-- Navigate to `.vscode/vscode-rewst-CICD/config.json.example`
-- Rename `config.json.example` to `config.json`
-- Replace Relevant Values in config file
-	- rewst_instance1 with your company name (you will need a folder at the root level that matches this exactly)
-    - Secret with the secret you selected on the webhook trigger
-    - Webhook with the webhook from your trigger
-    - PS with true or false that you have the Rewst Powershell Interpretter
-
-```
-{
-    "RewstInstances": {
-        "rewst_instance1": {
-            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
-            "Secret": "123456789",
-            "PS": true
-        },
-        "rewst_instance2": {
-            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
-            "Secret": "123456789",
-            "PS": false
-        }
-    }
-}
-```
-
----
-
-  
-
 ## 🧩 Usage Patterns
 
   
@@ -200,6 +112,91 @@ The template name will be updated in Rewst to the default of the realtive path t
     ```
 
     *Saves → Pushes to Rewst*
+---
+  
+
+## 🛠️ Installation Guide
+
+  
+
+### Clone this repo to get supporting files
+
+```bash
+
+git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
+
+```
+
+### Setup Trigger Task on Save
+
+- Install VSCode extension [Gruntfuggly.triggertaskonsave](https://github.com/Gruntfuggly/triggertaskonsave) 
+
+- Go to the extension's settings
+
+(VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json")
+
+- Copy in this configuration
+
+```json
+{
+    "git.autofetch": true,
+    "editor.formatOnSave": true,
+    "triggerTaskOnSave.tasks": {
+        "manage_template": [
+            "**"
+        ]
+    }
+}
+```
+
+  
+
+### Rewst Import Workflow
+
+- Import workflow from json file `.vscode/vscode-rewst-CICD/[RAVEN] Template CICD*.json` workflow into Rewst
+
+- Ensure Webhook Trigger is
+    - Enabled
+    - POST method is allowed
+    - YOUR OWN "Secret Key" is selected (will be used later)
+
+- Take note of webhook URL
+
+  
+
+### Config
+
+***!CAUTION***
+
+Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
+
+  
+
+- Navigate to `.vscode/vscode-rewst-CICD/config.json.example`
+- Rename `config.json.example` to `config.json`
+- Replace Relevant Values in config file
+	- rewst_instance1 with your company name (you will need a folder at the root level that matches this exactly)
+    - Secret with the secret you selected on the webhook trigger
+    - Webhook with the webhook from your trigger
+    - PS with true or false that you have the Rewst Powershell Interpretter
+
+```
+{
+    "RewstInstances": {
+        "rewst_instance1": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": true
+        },
+        "rewst_instance2": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": false
+        }
+    }
+}
+```
+
 ---
 
   
