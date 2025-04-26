@@ -71,17 +71,11 @@ git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
 
 ### Setup Trigger Task on Save
 
-Install VSCode extension [Gruntfuggly.triggertaskonsave](https://github.com/Gruntfuggly/triggertaskonsave)
+- Install VSCode extension [Gruntfuggly.triggertaskonsave](https://github.com/Gruntfuggly/triggertaskonsave) 
 
-  
+- Go to the extension's settings
 
-After installation go to the extension's settings
-
-  
-
-VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json"
-
-  
+(VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json")
 
 - Copy in this configuration
 
@@ -101,21 +95,12 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
 
 ### Rewst Import Workflow
 
-  
-
 - Import "\[RAVEN] Template CICD*.json" workflow into Rewst
 
-  
-
 - Ensure Webhook Trigger is
-
-- Enabled
-
-- POST method is allowed
-
-- YOUR OWN "Secret Key" is selected (will be used later)
-
-  
+    - Enabled
+    - POST method is allowed
+    - YOUR OWN "Secret Key" is selected (will be used later)
 
 - Take note of webhook URL
 
