@@ -86,25 +86,15 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
 - Copy in this configuration
 
 ```json
-
 {
-
-"git.autofetch": true,
-
-"editor.formatOnSave": true,
-
-"triggerTaskOnSave.tasks": {
-
-"manage_template": [
-
-"**"
-
-]
-
+    "git.autofetch": true,
+    "editor.formatOnSave": true,
+    "triggerTaskOnSave.tasks": {
+        "manage_template": [
+            "**"
+        ]
+    }
 }
-
-}
-
 ```
 
   
@@ -140,49 +130,28 @@ Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if u
   
 
 - Navigate to `.vscode\vscode-rewst-CICD\config.json.example`
-
 - Rename `config.json.example` to `config.json`
-
 - Replace Relevant Values in config file
-
-- rewst_instance1 with your company name (you will need a folder at the root level that matches this exactly)
-
-- Secret with the secret you selected on the webhook trigger
-
-- Webhook with the webhook from your trigger
-
-- PS with true or false that you have the Rewst Powershell Interpretter
+	- rewst_instance1 with your company name (you will need a folder at the root level that matches this exactly)
+    - Secret with the secret you selected on the webhook trigger
+    - Webhook with the webhook from your trigger
+    - PS with true or false that you have the Rewst Powershell Interpretter
 
 ```
-
 {
-
-"RewstInstances": {
-
-"rewst_instance1": {
-
-"Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
-
-"Secret": "123456789",
-
-"PS": true
-
-},
-
-"rewst_instance2": {
-
-"Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
-
-"Secret": "123456789",
-
-"PS": false
-
+    "RewstInstances": {
+        "rewst_instance1": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": true
+        },
+        "rewst_instance2": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": false
+        }
+    }
 }
-
-}
-
-}
-
 ```
 
 ---
@@ -242,25 +211,25 @@ The template name will be updated in Rewst to the default of the realtive path t
 
 1.  **Creation**:
 
-```html
+    ```html
 
-<!-- create template -->
+    <!-- create template -->
 
-<div>New Template</div>
+    <div>New Template</div>
 
-```
+    ```
 
-  
+    
 
-```powershell
+    ```powershell
 
-# create template
+    # create template
 
-# powershell example
+    # powershell example
 
-Write-Host  "Hi"
+    Write-Host  "Hi"
 
-```
+    ```
 
 *Saves → Pushes to Rewst and updates file with template guid*
 
