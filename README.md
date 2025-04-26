@@ -198,27 +198,16 @@ Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if u
 ```
 
 📁 .vscode/
-
 ├── 📄 tasks.json
-
 └── 📁 vscode-rewst-CICD/
-
-├── 📄 config.json
-
-└── 📄 manage_template.ps1
-
+    ├── 📄 config.json
+    └── 📄 manage_template.ps1
 📁 rewst_instance1/
-
 ├── 📁 project1/
-
-│ └── 📄 dashboard.html → Rewst: "rewst_instance1/project1/dashboard.html"
-
+|    └── 📄 dashboard.html → Rewst: "rewst_instance1/project1/dashboard.html"
 └── 📁 project2/
-
-└── 📁 shared/
-
-└── 📄 base_layout.html
-
+     └── 📁 shared/
+         └── 📄 base_layout.html
 ```
 
   
