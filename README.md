@@ -18,7 +18,6 @@
 ### Folder Structure
 
 ```
-
 📁 .vscode/
 ├── 📄 tasks.json
 └── 📁 vscode-rewst-CICD/
@@ -38,7 +37,7 @@ After saving a file, a script will run that looks for these keywords in the firs
 
   
 
-`create template` or `export`
+`create template` or `export [UUID]`
 
   
 
@@ -54,7 +53,7 @@ If you don't want to export every save simply remove the `export` keyword from t
 
   
 
-The template name will be updated in Rewst to the default of the realtive path to the file.
+The template name will be updated in Rewst to the default of the relative path to the file.
 
   
   
@@ -118,11 +117,11 @@ The template name will be updated in Rewst to the default of the realtive path t
 
 ### Clone this repo to get supporting files
 
-```bash
+    ```bash
 
-git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
+    git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
 
-```
+    ```
 
 ### Setup Trigger Task on Save
 
