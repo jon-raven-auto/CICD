@@ -1,12 +1,6 @@
 
 # VSCode Rewst Template CI/CD
 
-**Automated Template Management for Rewst Workflows**
-
-  
-
----
-
 ## ✨ Key Features
 
 -  **Instant Sync**: Auto-push templates to Rewst on file save
