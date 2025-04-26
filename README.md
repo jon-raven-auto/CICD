@@ -7,24 +7,6 @@
 
 ---
 
-  
-
-## 📋 Table of Contents
-
-- [Features](#-key-features)
-
-- [Requirements](#-requirements)
-
-- [Installation](#-installation-guide)
-
-- [Usage](#-usage-patterns)
-
-  
-
----
-
-  
-
 ## ✨ Key Features
 
 -  **Instant Sync**: Auto-push templates to Rewst on file save
@@ -34,8 +16,6 @@
 -  **Multi-Org Support**: Manage multiple Rewst organizations via `.ENV` sections
 
 -  **Filetype Agnostic**: Works with `<!-- -->`, `{# #}`, or `/* */` syntax
-
- 
   
 
 ## Requirements
