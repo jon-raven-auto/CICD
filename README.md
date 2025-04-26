@@ -67,7 +67,7 @@ git  clone  https://github.com/jon-raven-auto/vscode-rewst-CICD.git
 
 ### Rewst Import Workflow
 
-- Import workflow from json file `.vscode\vscode-rewst-CICD\[RAVEN] Template CICD*.json` workflow into Rewst
+- Import workflow from json file `.vscode/vscode-rewst-CICD/[RAVEN] Template CICD*.json` workflow into Rewst
 
 - Ensure Webhook Trigger is
     - Enabled
@@ -86,7 +86,7 @@ Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if u
 
   
 
-- Navigate to `.vscode\vscode-rewst-CICD\config.json.example`
+- Navigate to `.vscode/vscode-rewst-CICD/config.json.example`
 - Rename `config.json.example` to `config.json`
 - Replace Relevant Values in config file
 	- rewst_instance1 with your company name (you will need a folder at the root level that matches this exactly)
