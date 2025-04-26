@@ -69,10 +69,11 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
 
 ### Config
 ***!CAUTION***
-Please add `.vscode\vscode-rewst-CICD\config.json` to your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
+Please ensure `.vscode/vscode-rewst-CICD/config.json` is in your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
 
-- Navigate to `.vscode\vscode-rewst-CICD\config.json`
-- Replace Relevant Values
+- Navigate to `.vscode\vscode-rewst-CICD\config.json.example`
+- Rename `config.json.example` to `config.json`
+- Replace Relevant Values in config file
 	- rewst_instance1  with your company name (you will need a folder at the root level that matches this exactly)
     - Secret with the secret you selected on the webhook trigger
     - Webhook with the webhook from your trigger
