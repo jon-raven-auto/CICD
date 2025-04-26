@@ -10,9 +10,9 @@
 				"-executionpolicy",
 				"bypass",
 				"-File",
-				"${workspaceFolder}/.vscode/manage_template.ps1",
+				"${workspaceFolder}/.vscode/vscode-rewst-CICD/manage_template.ps1",
 				"-TargetFile",
-				"${file}"
+				"${relativeFile}"
 			],
 			"problemMatcher": [],
 			"group": {

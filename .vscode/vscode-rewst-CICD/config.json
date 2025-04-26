@@ -1,0 +1,14 @@
+{
+    "RewstInstances": {
+        "rewst_instance1": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": true
+        },
+        "rewst_instance2": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": false
+        }
+    }
+}

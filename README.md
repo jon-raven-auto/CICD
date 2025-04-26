@@ -50,7 +50,7 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
     "editor.formatOnSave": true,
     "triggerTaskOnSave.tasks": {
         "manage_template": [
-            "templates/**"
+            "**"
         ]
     }
 }
@@ -67,55 +67,63 @@ VSCode > Gear Icon > Settings > triggerTaskOnSave.tasks > "Edit in settings.json
 
 - Take note of webhook URL
 
-### Configure ENV
+### Config
 ***!CAUTION***
-Please add .ENV to your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
+Please add `.vscode\vscode-rewst-CICD\config.json` to your .gitignore if using git before proceeding. [Git Ignore and .gitignore](https://www.w3schools.com/git/git_ignore.asp)
 
-- Navigate to ```.vscode/.ENV```
-
-- Replace `yourcompany` in the variable names
+- Navigate to `.vscode\vscode-rewst-CICD\config.json`
+- Replace Relevant Values
+	- rewst_instance1  with your company name (you will need a folder at the root level that matches this exactly)
+    - Secret with the secret you selected on the webhook trigger
+    - Webhook with the webhook from your trigger
+    - PS with true or false that you have the Rewst Powershell Interpretter
+	
 ```
-yourcompany_secret=1234567890
-yourcompany_webhook=https://engine.rewst.io/webhooks/custom/trigger/*/*
-yourcompany_ps=true
+{
+    "RewstInstances": {
+        "rewst_instance1": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": true
+        },
+        "rewst_instance2": {
+            "Webhook": "https://engine.rewst.io/webhooks/custom/trigger/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000",
+            "Secret": "123456789",
+            "PS": false
+        }
+    }
+}
 ```
-
-
-- Replace values
-    - _secret with the secret you selected on the webhook trigger
-    - _webhook with the webhook from your trigger
-    - _ps with true or false that you have the Rewst Powershell Interpretter
- 
 ---
 
 ## 🧩 Usage Patterns  
 
-This setup will only target files nested under `/templates/yourcompany`. Any other files will not trigger the script on save. You can have layers of folders under this.
-
 ### Folder Structure  
 ```  
 📁 .vscode/
-└── 📄 .ENV
-└── 📄 manage_template.ps1
-└── 📄 tasks.json
-📁 templates/
-└── 📁 yourcompany/  
-    ├── 📁 project1/  
-    │   └── 📄 dashboard.html → Rewst: "project1/dashboard.html"  
-    └── 📁 project2/  
-        └── 📁 shared/  
-            └── 📄 base_layout.html → Rewst: "shared/base_layout.html"  
+├── 📄 tasks.json
+└── 📁 vscode-rewst-CICD/  
+         ├── 📄 config.json
+         └── 📄 manage_template.ps1
+📁 rewst_instance1/  
+├── 📁 project1/  
+│       └── 📄 dashboard.html → Rewst: "rewst_instance1/project1/dashboard.html"  
+└── 📁 project2/  
+         └── 📁 shared/  
+                  └── 📄 base_layout.html
 ```
 
-After setup everything revolves around keywords in the first line of the file:
+After saving a file, a script will run that looks for these keywords in the first line:
 
 `create template` or `export`
 
 It does not matter if these are commented out, the script will still process them. If both are present then preference is given to `export`.
 
-To create a new template simply put the `create template` keyword in the first line of the file and save. You should see the script running at the bottom of your VSCode. On completion `create template` will be replaced with `export 00000000-0000-0000-0000-000000000000`. Any further changes will then be exported to the proper template.
+To create a new template simply put the `create template` keyword in the first line of the file and save. You should see the script running at the bottom of your VSCode. On completion `create template` will be replaced with `export 00000000-0000-0000-0000-000000000000`. Any further saves will then be exported to the proper template.
 
-The template name will be updated in Rewst to the default of `project_folder/file.html`.
+If you don't want to export every save simply remove the `export` keyword from the first line.
+
+The template name will be updated in Rewst to the default of the realtive path to the file.
 
 
 
