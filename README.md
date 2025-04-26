@@ -188,25 +188,18 @@ The template name will be updated in Rewst to the default of the realtive path t
 
     ```
 
-*Saves → Pushes to Rewst and updates file with template guid*
-
-  
-
+    *Saves → Pushes to Rewst and updates file with template guid*
 2.  **Updates**:
 
-```powershell
+    ```powershell
 
-# export 00000000-0000-0000-0000-000000000000
+    # export 00000000-0000-0000-0000-000000000000
 
-Write-Host  "Hi"
+    Write-Host  "Hi"
 
-```
+    ```
 
-*Saves → Pushes to Rewst*
-
-  
-  
-
+    *Saves → Pushes to Rewst*
 ---
 
   
