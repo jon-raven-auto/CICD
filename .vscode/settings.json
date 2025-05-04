@@ -1,0 +1,57 @@
+{
+    // The following will hide the js and map files in the editor
+    "ego.power-tools": {
+        "startup": [
+            {
+                "type": "script",
+                "script": "vscode-rewst-CICD/cmds/startup.js.js"
+            }
+        ],
+        "events": [
+            {
+                "type": "file.saved",
+                "files": [
+                    "**/**"
+                ],
+                "exclude": [
+                    ".vscode/**"
+                ],
+                "action": {
+                    "script": "vscode-rewst-CICD/cmds/manage_template.js",
+                    "type": "script",
+                    "options": {
+                        "command": "export_template"
+                    }
+                }
+            }
+        ],
+        "commands": {
+            "create_template": {
+                "script": "vscode-rewst-CICD/cmds/manage_template.js",
+                "button": {
+                    "text": "Create Template",
+                },
+                "forFile": true,
+                "options": {
+                    "command": "create_template"
+                }
+            },
+            "export_template": {
+                "script": "vscode-rewst-CICD/cmds/manage_template.js",
+                "button": {
+                    "text": "Export Template"
+                },
+                "forFile": true,
+                "options": {
+                    "command": "export_template"
+                }
+            },
+            "start_up": {
+                "script": "vscode-rewst-CICD/cmds/startup.js",
+                // "button": {
+                //     "text": "Startup"
+                // }
+            }
+        }
+    }
+}
