@@ -46,7 +46,7 @@ exports.execute = async (args) => {
     session.config = config
 
     const get_company_config = async (document) => {
-        const path = relPath(document.uri)
+        const path = relative_path(document.uri)
         const parts = path.split('\\')
         const folder = parts[1]
         const company_config = session.config.RewstInstances[folder] || 0
@@ -59,7 +59,7 @@ exports.execute = async (args) => {
     //#endregion
 
     //#region helpers
-    const relPath = (path) => vscode.Uri.parse(path).fsPath.replace(root, ".");
+    const relative_path = (path) => vscode.Uri.parse(path).fsPath.replace(root, ".");
 
     const associate_template = async (document, template_guid) => {
         log("associate lmbda")
@@ -85,6 +85,12 @@ exports.execute = async (args) => {
         log(template_guid)
         return template_guid
     }
+
+    const get_name = (document) => {
+        return relative_path(document.uri.path)
+    };
+
+    session.name = get_name;
 
     //#endregion
 
@@ -132,7 +138,7 @@ exports.execute = async (args) => {
             return
         }
 
-        const name = document.uri.path
+        const name = get_name(document)
         const base64Content = btoa(document.getText())
         const body = { //body
             "method": "export",
@@ -182,7 +188,7 @@ exports.execute = async (args) => {
             return
         }
 
-        const name = document.uri.path
+        const name = get_name(document)
         const base64Content = btoa(document.getText())
         const body = { //body
             "method": "create",
@@ -216,7 +222,7 @@ exports.execute = async (args) => {
 
     //#endregion
 
-
+    session.info("Loaded Rewst Template CICD Startup")
     log("Loaded STARTUP")
 
     return
