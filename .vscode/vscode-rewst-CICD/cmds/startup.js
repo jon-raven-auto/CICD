@@ -146,7 +146,7 @@ exports.execute = async (args) => {
             "ps": company_config.PS,
             ...params
         };
-        log(JSON.stringify(body))
+        // log(JSON.stringify(body))
 
         if (token.isCancellationRequested) { return }
 
@@ -195,7 +195,7 @@ exports.execute = async (args) => {
             "ps": company_config.PS,
             ...params
         };
-        log(JSON.stringify(body))
+        // log(JSON.stringify(body))
 
 
         if (token.isCancellationRequested) { return }
