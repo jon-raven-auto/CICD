@@ -33,23 +33,21 @@ exports.execute = async (args) => {
     //#endregion
 
     //#region config
-    const config = await fs.readJson(config_path).catch(err => {
+    const config = async () => fs.readJson(config_path).catch(err => {
         log(err)
         return 0
     });
 
-    if (config === 0) {
+    if (await config() === 0) {
         log("STOPPING")
         return
     }
-
-    session.config = config
 
     const get_company_config = async (document) => {
         const path = relative_path(document.uri)
         const parts = path.split('\\')
         const folder = parts[1]
-        const company_config = session.config.RewstInstances[folder] || 0
+        const company_config = (await config()).RewstInstances[folder] || 0
         log("Company config", folder)
         if (company_config === 0)
             session.warning(`No company config for folder: ${folder}`)
@@ -222,6 +220,7 @@ exports.execute = async (args) => {
 
     //#endregion
 
+    //#region done
     session.info("Loaded Rewst Template CICD Startup")
     log("Loaded STARTUP")
 
